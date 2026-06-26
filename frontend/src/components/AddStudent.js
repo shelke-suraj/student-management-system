@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import api from "../api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUserPlus, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 function AddStudent() {
   const [student, setStudent] = useState({
@@ -46,9 +46,9 @@ function AddStudent() {
       {/* Title */}
       <div className="sub-title">
         <FontAwesomeIcon
-          icon={faUser}
+          icon={faUserPlus}
           className="icon"
-          style={{ fontSize: "1.5rem", color: "blue" }}
+          style={{ fontSize: "1.6rem", color: "#2563eb" }}
         />
         <h2>Add Student</h2>
       </div>
@@ -107,7 +107,7 @@ function AddStudent() {
         {/* BUTTON */}
        
         <button type="submit" className="btn-primary">
-          Add Student
+          <FontAwesomeIcon icon={faPlus} style={{fontSize:"1rem"}} /> Add Student
         </button>
 
       </form>

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import api from "../api";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUsers } from "@fortawesome/free-solid-svg-icons";
 
 function StudentList() {
   const [students, setStudents] = useState([]);
@@ -28,7 +30,10 @@ function StudentList() {
 
   return (
     <div className="student-list-container">
+      <div className="std-list">
+      <FontAwesomeIcon icon={faUsers} style={{color: "#2563eb", fontSize:"1.6rem"}} />
       <h2>Student List</h2>
+      </div>
 
       <table className="student-table">
         <thead>
