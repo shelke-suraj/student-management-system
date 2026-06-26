@@ -1,0 +1,167 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f9;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* Header Bar */
+.subtitlebar {
+  background-color: #1341be;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* Add Student Title */
+.sub-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Card */
+.card {
+  background-color: #fff;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* FORM GRID */
+.input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Form Group */
+.form-group {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs (clean global style) */
+input {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* BUTTON SYSTEM (IMPORTANT UPGRADE) */
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  width: 20%; 
+  margin: 10px auto 0; /* centers the button */
+  display: block
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #dc2626;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* TABLE */
+.student-list-container {
+  margin-top: 10px;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.student-table th {
+  background-color: #2563eb;
+  color: white;
+  padding: 14px;
+  text-align: left;
+}
+
+.student-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.student-table tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.student-table tr:hover {
+  background-color: #e0f2fe;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .input {
+    flex-direction: column;
+  }
+}
