@@ -26,7 +26,6 @@ function AddStudent() {
 
       alert("Student Added Successfully");
 
-      // reset form instead of reload (React way)
       setStudent({
         name: "",
         email: "",
@@ -41,74 +40,78 @@ function AddStudent() {
   };
 
   return (
-    <div className="card">
+    <div className="card-student">
 
       {/* Title */}
       <div className="sub-title">
         <FontAwesomeIcon
           icon={faUserPlus}
-          className="icon"
           style={{ fontSize: "1.6rem", color: "#2563eb" }}
         />
         <h2>Add Student</h2>
       </div>
 
-      {/* FORM */}
-      <form className="input" onSubmit={addStudent}>
+      <form onSubmit={addStudent}>
 
-        <div className="form-group">
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter Name"
-            value={student.name}
-            onChange={handleChange}
-            required
-          />
+        <div className="input">
+
+          <div className="form-group">
+            <label>Name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter Name"
+              value={student.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter Email"
+              value={student.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Course</label>
+            <input
+              type="text"
+              name="course"
+              placeholder="Enter Course"
+              value={student.course}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Marks</label>
+            <input
+              type="number"
+              name="marks"
+              placeholder="Enter Marks"
+              value={student.marks}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
         </div>
 
-        <div className="form-group">
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter Email"
-            value={student.email}
-            onChange={handleChange}
-            required
-          />
+        {/* Button */}
+        <div className="button-container">
+          <button type="submit" className="btn-primary">
+            <FontAwesomeIcon icon={faPlus} />
+            Add Student
+          </button>
         </div>
-
-        <div className="form-group">
-          <label>Course</label>
-          <input
-            type="text"
-            name="course"
-            placeholder="Enter Course"
-            value={student.course}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <label>Marks</label>
-          <input
-            type="number"
-            name="marks"
-            placeholder="Enter Marks"
-            value={student.marks}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        {/* BUTTON */}
-       
-        <button type="submit" className="btn-primary">
-          <FontAwesomeIcon icon={faPlus} style={{fontSize:"1rem"}} /> Add Student
-        </button>
 
       </form>
     </div>
